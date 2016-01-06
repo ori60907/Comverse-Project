@@ -10,24 +10,30 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+
+
+/*     */
+
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family:sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: rgb(160, 160, 160);
 }
-a:hover{
-    text-decoration:none;
-    color:rgb(47, 149, 200);
 
-}
-a:visited{
-    text-decoration:none;
-}
+    a:hover {
+        text-decoration: none;
+        color: rgb(47, 149, 200);
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -109,193 +115,665 @@ textarea {
    ========================================================================== */
 
 
-header{
-    width: 100%;
-    height:100px;
-    display:block;
-    z-index:5;
+
+
+
+/* ==============================================
+   Header and Nav Bar
+   ============================================== */
+
+
+
+@media screen and (min-width: 980px) {
+    .centerHeader {
+        height: 100%;
+        width: 960px;
+        margin: auto;
+    }
+
+    header {
+        width: 100%;
+        height: 100px;
+        display: block;
+        z-index: 5;
+    }
+
+    .mainLogo {
+        height: 60%;
+        width: 180px;
+        margin-top: 15px;
+        float: left;
+    }
 }
-.centerHeader{
-    height:100%;
-    width: 1000px;
-    margin:auto;
+
+@media screen and (min-width: 800px) and (max-width: 980px) {
+    .centerHeader {
+        height: 100%;
+        width: 785px;
+        margin: auto;
+    }
+
+    header {
+        width: 100%;
+        height: 120px;
+        display: block;
+        z-index: 5;
+    }
+
+    .mainLogo {
+        height: 60%;
+        width: 115px;
+        margin-top: 38px;
+        float: left;
+    }
 }
-.mainLogo{
-    height:60%;
-    width:180px;
-    margin-top:15px;
-    float:left;
-}
+
 .mainLogo img {
-    width:100%;
+    width: 100%;
 }
-.mainNav{
-    float:left;
-    height:50%;
-    margin-top:30px;
-    margin-left:10px;
-    width:600px;
-    padding-top:15px;
-    position:relative;
+@media screen and (max-width: 800px) {
+     .centerHeader {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    header {
+        width: 100%;
+        height: 90px;
+        display: block;
+        z-index: 5;
+    }
+
+    .mainLogo {
+        height: 60%;
+        width: 100px;
+        margin-top: 0px;
+        padding-top:10px;
+        margin:auto;
+        
+    }
 }
-.mainNav>ul>li{
-    display:inline;
-    float:left;
-    width:130px;
-    height:30px;
-    box-sizing:border-box;
+
+@media screen and (min-width: 980px) {
+    .mainNav {
+        float: left;
+        height: 50%;
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 600px;
+        padding-top: 15px;
+        position: relative;
+    }
+
+        .mainNav > ul {
+            float: left;
+            padding-left: 40px;
+        }
 }
-.mainNav>ul>li>a{
-    display:block;
-    width:100%;
-    padding-top:10px;
-    font-size:12px;
-    text-align:center;
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+    .mainNav {
+        float: left;
+        height: 50%;
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 530px;
+        padding-top: 15px;
+        position: relative;
+    }
+
+        .mainNav > ul {
+            float: left;
+            padding-left: 6px;
+        }
 }
-.mainNav>ul>li:hover{
-    background-color:#FCFCFC;
-    box-sizing:border-box;
-    border-top: 1px solid rgb(160, 160, 160);
-    border-left: 1px solid rgb(160, 160, 160);
-    border-right: 1px solid rgb(160, 160, 160);
+@media screen and (max-width: 800px) {
+        .mainNav {
+        float: left;
+        height: 50%;
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 530px;
+        padding-top: 15px;
+        position: relative;
+        display:none;
+    }
+
+        .mainNav > ul {
+            float: left;
+            padding-left: 6px;
+        }
 }
-.mainNav>ul>li:hover>.subNav {
-    display:block;
-    position:absolute;
+
+.mainNav > ul > li {
+    display: inline;
+    float: left;
+    width: 130px;
+    height: 30px;
+    box-sizing: border-box;
 }
-.subNav{
-    display:none;
-    position:absolute;
-    width:900px;
-    background-color:#FCFCFC;
-    left:-160px;
-    height:310px;
+
+    .mainNav > ul > li > a {
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mainNav > ul > li:hover {
+        background-color: #FCFCFC;
+        box-sizing: border-box;
+        border-top: 1px solid rgb(160, 160, 160);
+        border-left: 1px solid rgb(160, 160, 160);
+        border-right: 1px solid rgb(160, 160, 160);
+    }
+
+        .mainNav > ul > li:hover > .subNav {
+            display: block;
+            position: absolute;
+        }
+
+.subNav {
+    display: none;
+    position: absolute;
+    width: 900px;
+    background-color: #FCFCFC;
+    left: -160px;
+    height: 310px;
     box-shadow: 3px 3px 3px 0px grey;
 }
-.subNavLinksLeft
-{
-    width:150px;
-    height:70%;
-    margin-top:15px;
-    font-size:12px;
-    margin-left:25px;
-    font-size:14px;
-    float:left;
-    display:block;
+
+.subNavLinksLeft {
+    width: 150px;
+    height: 70%;
+    margin-top: 15px;
+    font-size: 12px;
+    margin-left: 25px;
+    font-size: 14px;
+    float: left;
+    display: block;
     list-style-type: none;
 }
-.subNavLinksRight
-{
-    width:150px;
-    height:70%;
-    margin-top:15px;
-    font-size:14px;
-    margin-left:35px;
-    float:left;
-    display:block;
+
+.subNavLinksRight {
+    width: 150px;
+    height: 70%;
+    margin-top: 15px;
+    font-size: 14px;
+    margin-left: 35px;
+    float: left;
+    display: block;
     list-style-type: none;
 }
-.subNavLinksLeft>li{
-    color:rgb(160, 160, 160);
-}
-.subNavLinksRight>li{
-    color:rgb(160, 160, 160);
-}
-.subNavDivide{
-    height:100%;
-    width:20px;
-    margin-left:50px;
-    background-image: url("../img/line_divider_video.png");
-    background-repeat:no-repeat;
-    float:left;
-    margin-top:20px;
-}
-.subNavImg
-{
-    margin-left:40px;
-    width:250px;
-    float:left;
-    margin-top:40px;
-}
-.headerOptions{
-    margin-top:20px;
-    width:170px;
-    float:left;
-    font-size:12px;
-    height:30px;
+
+.subNavLinksLeft > li {
     color: rgb(160, 160, 160);
-    position:relative;
 }
+
+.subNavLinksRight > li {
+    color: rgb(160, 160, 160);
 }
-.headerOptions  >select{
-    /*float:left;*/
-    border: none;
+
+.subNavDivide {
+    height: 100%;
+    width: 20px;
+    margin-left: 50px;
+    background-image: url("../img/line_divider_video.png");
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 20px;
 }
-.headerOptionsDivider{
-    background-image: url("../img/divider.png");
-    background-repeat:no-repeat;
-    height:15px;
-    width:3px;
-    margin-left:4px;
-    float:left;
-    position:absolute;
-    left:40px;
-    top:0px;
-    
+
+.subNavImg {
+    margin-left: 40px;
+    width: 250px;
+    float: left;
+    margin-top: 40px;
 }
-.headerOptions>a{
-    margin-left:5px;
-    
+
+
+/* =========  wide version  ==========*/
+
+@media screen and (min-width: 980px)  {
+    .headerOptions {
+        margin-top: 20px;
+        width: 170px;
+        float: left;
+        font-size: 12px;
+        height: 30px;
+        color: rgb(160, 160, 160);
+        position: relative;
+    }
+
+        .headerOptions > select {
+            /*float:left;*/
+            border: none;
+        }
+
+    .headerOptionsDivider {
+        background-image: url("../img/divider.png");
+        background-repeat: no-repeat;
+        height: 15px;
+        width: 3px;
+        margin-left: 4px;
+        float: left;
+        position: absolute;
+        left: 40px;
+        top: 0px;
+    }
+
+    .headerOptions > a {
+        margin-left: 5px;
+    }
+
+    #searchInput {
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+        width: 150px;
+    }
+
+    .searchBox {
+        float: left;
+        height: 30px;
+        width: 150px;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .searchBoxDivider {
+        position: absolute;
+    }
+
+    .searchButton {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 15px;
+    }
+
+    .searchBoxDivider {
+        background-image: url("../img/divider.png");
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 5px;
+        right: 22px;
+        top: 2px;
+        position: absolute;
+    }
+    .mobileSearchBtn{
+        display:none;
+    }
 }
-#searchInput{
-    border-radius:5px;
-    border:1px solid #d2d2d2;
-    width:170px;
+
+/* =========  medium version  ==========*/
+
+@media screen and (min-width: 750px) and (max-width: 980px) {
+        .headerOptions {
+        margin-top: 20px;
+        width: 120px;
+        float: left;
+        font-size: 10px;
+        height: 30px;
+        color: rgb(160, 160, 160);
+        position: relative;
+    }
+
+        .headerOptions > select {
+            /*float:left;*/
+            border: none;
+        }
+
+    .headerOptionsDivider {
+        background-image: url("../img/divider.png");
+        background-repeat: no-repeat;
+        height: 15px;
+        width: 3px;
+        margin-left: 2px;
+        float: left;
+        position: absolute;
+        left: 40px;
+        top: 0px;
+    }
+
+    .headerOptions > a {
+        margin-left: 3px;
+    }
+
+    #searchInput {
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+        width: 120px;
+    }
+
+    .searchBox {
+        float: left;
+        height: 30px;
+        width: 120px;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .searchBoxDivider {
+        position: absolute;
+    }
+
+    .searchButton {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 15px;
+    }
+
+    .searchBoxDivider {
+        background-image: url("../img/divider.png");
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 5px;
+        right: 22px;
+        top: 2px;
+        position: absolute;
+    }
+    .mobileSearchBtn{
+        display:none;
+    }
+
 }
-.searchBox{
-    float:left;
-    height:30px;
-    width:170px;
-    position:relative;
-    margin-top:15px;
+
+/* =========  mobile version  ==========*/
+
+@media screen and  (max-width: 800px) {
+        .headerOptions {
+        margin-top: 20px;
+        width: 120px;
+        float: left;
+        font-size: 10px;
+        height: 30px;
+        color: rgb(160, 160, 160);
+        position: relative;
+        display:none;
+    }
+
+        .headerOptions > select {
+            /*float:left;*/
+            border: none;
+        }
+
+    .headerOptionsDivider {
+        background-image: url("../img/divider.png");
+        background-repeat: no-repeat;
+        height: 15px;
+        width: 3px;
+        margin-left: 2px;
+        float: left;
+        position: absolute;
+        left: 40px;
+        top: 0px;
+    }
+
+    .headerOptions > a {
+        margin-left: 3px;
+    }
+
+    #searchInput {
+        border-radius: 5px;
+        border: 1px solid #d2d2d2;
+        width: 120px;
+    }
+
+    .searchBox {
+        float: left;
+        height: 30px;
+        width: 120px;
+        position: relative;
+        margin-top: 15px;
+        display:none;
+    }
+
+    .searchBoxDivider {
+        position: absolute;
+    }
+
+    .searchButton {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 15px;
+    }
+
+    .searchBoxDivider {
+        background-image: url("../img/divider.png");
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 5px;
+        right: 22px;
+        top: 2px;
+        position: absolute;
+    }
+
+    .mobileSearchBtn{
+        display:block;
+        width:30px;
+        height:30px;
+        border: 1px solid rgb(160, 160, 160);
+        border-radius:4px;
+        position:absolute;
+        background: url("../img/searchBtnMobile.png") no-repeat 50% 50%;
+        background-color:#e5e5e5;
+        right:10px;
+        top:10px;
+    }
+    .mobileMenuBtn{
+        display:block;
+        width:30px;
+        height:30px;
+        border: 1px solid rgb(160, 160, 160);
+        border-radius:4px;
+        position:absolute;
+        background: url("../img/hamburger-icon.png") no-repeat 50% 50%;
+        background-color:#e5e5e5;
+        left:10px;
+        top:10px;
+    }
+
 }
-.searchBoxDivider
-{
-    position:absolute;
-}
-.searchButton{
-    position:absolute;
-    right:5px;
-    top:5px;
-    width:15px;
-}
-.searchBoxDivider{
-    background-image: url("../img/divider.png");
-    background-repeat:no-repeat;
-    height:20px;
-    width:5px;
-    right:22px;
-    top:2px;
-    position:absolute;
-}
-.introDiv{
-    margin-top:0px;
+
+
+
+
+
+/* ==============================================
+   introduction section
+   ============================================== */
+
+
+
+.introDiv {
+    margin-top: 0px;
     background-image: url("../img/slide-bg-complexity.jpg");
-    background-repeat:no-repeat;
-    background-position-x:center;
-    height:550px;
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    height: 530px;
     background-attachment: fixed;
-    background-size: auto 100%;
+    background-size: auto 67%;
     box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
-    
-}
-main{
-    margin-top:-20px;
-    z-index:-1;
 }
 
+main {
+    margin-top: -20px;
+    z-index: -1;
+}
+    .additionalContentDiv:nth-child(1)
+    {
+        background-color:rgb(246, 61, 151);
+    }
+    .additionalContentDiv:nth-child(2)
+    {
+        background-color:rgb(106, 195, 60);
+    }
+    .additionalContentDiv:nth-child(3)
+    {
+        background-color:rgb(244, 111, 22);
+    }
 
+/* =========  mobile version  ==========*/
 
+@media screen and (max-width: 800px) {
+
+    .introSection{
+        width:100%;
+        height:100%;
+
+    }
+    .introDiv {
+        background:none;
+        margin-top: 0px;
+        height: auto;
+        box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+    .intoDivMobileBg{
+         background-image: url("../img/slide-bg-complexity.jpg");
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+        height: auto;
+        padding-bottom:40px;
+        background-size: auto 500px;
+        background-attachment:local;
+    }
+    .headlineAndDesc{
+        width:100%;
+        height:auto;
+        padding-bottom:10px;
+        background-color:rgba(51,153,204,0.7);
+        box-shadow:  0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+    .introHeadline
+    {
+        margin-left:10px;
+        margin-top:0px;
+        padding-top:20px;
+        color:white;
+        font-weight:lighter;
+        font-family:"Open Sans",sans-serif;
+    }
+    .introDescription{
+        margin-left:10px;
+        margin-top:6px;
+        color:white;
+        font-weight:lighter;
+        font-family:"Open Sans",sans-serif;
+        margin-bottom:5px;
+    }
+    .introDescription>.strong{
+        font-weight:200;
+    }
+    .introHeadline>.strong{
+        font-weight:200;
+    }
+    .learnMoreBtn{
+        margin-left:10px;
+        margin-top:10px;
+        background-color:rgb(51,153,204);
+        border-radius:7px;
+        width:130px;
+        height:30px;
+        font-size:0.7em;
+        font-weight:lighter;
+        color:white;
+    }
+    .learnMoreBtn:hover{
+        background-color:rgb(23, 164, 234);
+    }
+    .btnText{
+        margin-top:0px;
+        padding-top:6px;
+        padding-left:10px;
+        width:90px;
+        float:left;
+    }
+    .btnLogo{
+        margin-top:5px;
+        width:10px;
+        float:left;
+        padding-left:10px;
+    }
+
+    .introScrollbar{
+        margin-top:180px;
+        margin-left:0px;
+        height:auto;
+    }
+    .introScrollbar>ul{
+        list-style:none;
+    }
+    .introScrollBtn{
+        float:left;
+        list-style:none;
+        width:30px;
+        height:30px;
+        background-color:rgb(180, 180, 180);
+        /*color:rgb(86, 86, 86);*/
+        box-shadow: inset 0px 0px 15px -3px hsla(0, 0%, 26%, 0.4);
+        color:white;
+        margin-right:15px;
+        border-radius:5px;
+        display:block;
+        text-align:center;
+        padding-top:5px;
+    }
+
+    .introScrollBtn:hover{
+        background-color:rgb(51, 153, 204);
+        color:rgb(255, 255, 255);
+    }
+    .additionalContentDiv{
+        margin-top:6px;
+        width:100%;
+        height:150px;
+        color:white;
+        box-shadow:  0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+    .additionalContentPar{
+        margin-top:0px;
+        padding-top:15px;
+        padding-left:20px;
+        margin-right:40px;
+    }
+    .intoAdditionalContent{
+        margin-top:-22px;
+    }
+
+}
+/* =========  medium version  ==========*/
+
+@media screen and (min-width: 800px) and (max-width: 980px) {
+    .introDiv {
+        margin-top: 0px;
+        background-image: url("../img/slide-bg-complexity.jpg");
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+        height: 530px;
+        background-attachment: fixed;
+        background-size: auto 67%;
+        box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+}
+/* =========  wide version  ==========*/
+
+@media screen and (min-width: 980px){
+    .introDiv {
+        margin-top: 0px;
+        background-image: url("../img/slide-bg-complexity.jpg");
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+        height: 530px;
+        background-attachment: fixed;
+        background-size: auto 67%;
+        box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+
+}
 
 
 
@@ -333,21 +811,21 @@ main{
     width: 1px;
 }
 
-/*
+    /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
 
 /*
  * Hide visually and from screen readers, but maintain layout
@@ -389,10 +867,7 @@ main{
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -418,9 +893,9 @@ main{
         text-decoration: underline;
     }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
 
     abbr[title]:after {
         content: " (" attr(title) ")";
