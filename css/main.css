@@ -14,11 +14,18 @@
 
 /*     */
 
+@font-face {
+    font-family: open-sans-light;
+    src: url(../open-sans.light.ttf);
+}
+
+
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 62.5%;
     line-height: 1.4;
-    font-family:sans-serif;
+    font-family:open-sans-light;
+    font-weight:normal;
 }
 
 a {
@@ -180,7 +187,7 @@ textarea {
 
     header {
         width: 100%;
-        height: 90px;
+        height: 60px;
         display: block;
         z-index: 5;
     }
@@ -258,7 +265,7 @@ textarea {
         display: block;
         width: 100%;
         padding-top: 10px;
-        font-size: 12px;
+        font-size: 1.2rem;
         text-align: center;
     }
 
@@ -289,9 +296,8 @@ textarea {
     width: 150px;
     height: 70%;
     margin-top: 15px;
-    font-size: 12px;
     margin-left: 25px;
-    font-size: 14px;
+    font-size: 1.4rem;
     float: left;
     display: block;
     list-style-type: none;
@@ -301,7 +307,7 @@ textarea {
     width: 150px;
     height: 70%;
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-left: 35px;
     float: left;
     display: block;
@@ -341,7 +347,7 @@ textarea {
         margin-top: 20px;
         width: 170px;
         float: left;
-        font-size: 12px;
+        font-size: 1.2rem;
         height: 30px;
         color: rgb(160, 160, 160);
         position: relative;
@@ -372,6 +378,7 @@ textarea {
         border-radius: 5px;
         border: 1px solid #d2d2d2;
         width: 150px;
+        font-size: 1.4rem;
     }
 
     .searchBox {
@@ -414,7 +421,7 @@ textarea {
         margin-top: 20px;
         width: 120px;
         float: left;
-        font-size: 10px;
+        font-size: 1rem;
         height: 30px;
         color: rgb(160, 160, 160);
         position: relative;
@@ -445,6 +452,7 @@ textarea {
         border-radius: 5px;
         border: 1px solid #d2d2d2;
         width: 120px;
+        font-size: 1.4rem;
     }
 
     .searchBox {
@@ -488,7 +496,7 @@ textarea {
         margin-top: 20px;
         width: 120px;
         float: left;
-        font-size: 10px;
+        font-size: 1rem;
         height: 30px;
         color: rgb(160, 160, 160);
         position: relative;
@@ -591,31 +599,133 @@ textarea {
 
 .introDiv {
     margin-top: 0px;
-    background-image: url("../img/slide-bg-complexity.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 40%;
     height: 530px;
-    background-attachment: fixed;
-    background-size: auto 67%;
+    background-attachment: none;
     box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
 }
 
+    .introHeadline
+    {
+        margin-left:10px;
+        margin-top:0px;
+        padding-top:20px;
+        color:white;
+        font-weight:lighter;
+        /*font-family:"Open Sans",sans-serif;*/
+        font-size: 2.5rem;
+    }
+    .introDescription{
+        margin-left:10px;
+        margin-top:6px;
+        color:white;
+        font-weight:lighter;
+        /*font-family:"Open Sans",sans-serif;*/
+        margin-bottom:5px;
+        font-size: 1.5rem;
+    }
+    .introDescription>.strong{
+        font-weight:200;
+    }
+    .introHeadline>.strong{
+        font-weight:200;
+    }
+
+    .Button:hover{
+        background-color:rgb(23, 164, 234);
+    }
+    .btnText{
+        margin-top:0px;
+        padding-top:6px;
+        padding-left:10px;
+        width:90px;
+        float:left;
+        font-size: 1.2rem;
+    }
+    .btnLogo{
+        margin-top:5px;
+        width:10px;
+        float:left;
+        padding-left:10px;
+    }
+
 main {
-    margin-top: -20px;
+   /* margin-top: -20px;*/
     z-index: -1;
 }
     .additionalContentDiv:nth-child(1)
     {
         background-color:rgb(246, 61, 151);
     }
+    .additionalContentDiv:nth-child(1):hover
+    {
+        background-color:rgb(256, 61, 151);
+    }
     .additionalContentDiv:nth-child(2)
     {
         background-color:rgb(106, 195, 60);
+    }
+    .additionalContentDiv:nth-child(2):hover
+    {
+        background-color:rgb(106, 205, 60);
     }
     .additionalContentDiv:nth-child(3)
     {
         background-color:rgb(244, 111, 22);
     }
+    .additionalContentDiv:nth-child(3):hover
+    {
+        background-color:rgb(254, 121, 22);
+    }
+
+    .additionalContentPar{
+        margin-top:0px;
+        padding-top:1.5rem;
+        padding-left:1.2rem;
+        margin-right:50px;
+        font-size: 2.3rem;
+    }
+    .intoAdditionalContent{
+        margin-top:-22px;
+    }
+    .additionalContentBtn
+    {
+        float:left;
+        margin-right: 50px;
+        margin-left: 1.2rem;
+        padding-top: 0.5rem;
+    }
+    .additionalContentBtn>a>img{
+        float: left;
+    }
+    .additionalContentBtn>a>h6{
+        float: left;
+        padding-left: 1rem;
+        padding-top: 0.2rem;
+        font-size: 1.5rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: white;
+    }
+    .additionalContentReadMoreBtn{
+        float: left;
+        height: 30px;
+        width: 15px;
+        right: 10px;
+        position: absolute;
+        
+        top: 70%;
+        background-image: url("../img/promotion-item-arrow.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+    .aboutComverse,.corporateVideo,.worldCongress{
+        width: 100%;
+        margin-right: 0px;
+        display: block;
+        height: auto;  
+        position: relative;
+    }
+
 
 /* =========  mobile version  ==========*/
 
@@ -637,7 +747,7 @@ main {
         background-repeat: no-repeat;
         background-position-x: 40%;
         height: auto;
-        padding-bottom:40px;
+        padding-bottom:50px;
         background-size: auto 500px;
         background-attachment:local;
     }
@@ -648,55 +758,19 @@ main {
         background-color:rgba(51,153,204,0.7);
         box-shadow:  0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
     }
-    .introHeadline
-    {
-        margin-left:10px;
-        margin-top:0px;
-        padding-top:20px;
-        color:white;
-        font-weight:lighter;
-        font-family:"Open Sans",sans-serif;
-    }
-    .introDescription{
-        margin-left:10px;
-        margin-top:6px;
-        color:white;
-        font-weight:lighter;
-        font-family:"Open Sans",sans-serif;
-        margin-bottom:5px;
-    }
-    .introDescription>.strong{
-        font-weight:200;
-    }
-    .introHeadline>.strong{
-        font-weight:200;
-    }
+
     .learnMoreBtn{
         margin-left:10px;
-        margin-top:10px;
+        margin-top:15px;
+        font-size:0.7rem;
+    }
+     .Button{
         background-color:rgb(51,153,204);
         border-radius:7px;
-        width:130px;
-        height:30px;
-        font-size:0.7em;
+        width:13rem;
+        height:3rem;
         font-weight:lighter;
         color:white;
-    }
-    .learnMoreBtn:hover{
-        background-color:rgb(23, 164, 234);
-    }
-    .btnText{
-        margin-top:0px;
-        padding-top:6px;
-        padding-left:10px;
-        width:90px;
-        float:left;
-    }
-    .btnLogo{
-        margin-top:5px;
-        width:10px;
-        float:left;
-        padding-left:10px;
     }
 
     .introScrollbar{
@@ -711,16 +785,17 @@ main {
         float:left;
         list-style:none;
         width:30px;
-        height:30px;
+        height:25px;
         background-color:rgb(180, 180, 180);
         /*color:rgb(86, 86, 86);*/
-        box-shadow: inset 0px 0px 15px -3px hsla(0, 0%, 26%, 0.4);
+
         color:white;
         margin-right:15px;
         border-radius:5px;
         display:block;
         text-align:center;
         padding-top:5px;
+        font-size: 1.5rem;
     }
 
     .introScrollBtn:hover{
@@ -730,39 +805,165 @@ main {
     .additionalContentDiv{
         margin-top:6px;
         width:100%;
-        height:150px;
+        height: auto;
+        padding-bottom: 4rem;
         color:white;
         box-shadow:  0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
     }
-    .additionalContentPar{
-        margin-top:0px;
-        padding-top:15px;
-        padding-left:20px;
-        margin-right:40px;
-    }
-    .intoAdditionalContent{
-        margin-top:-22px;
-    }
+
 
 }
-/* =========  medium version  ==========*/
+/* =========  medium & wide version  ==========  and (max-width: 980px)*/
 
-@media screen and (min-width: 800px) and (max-width: 980px) {
+@media screen and (min-width: 800px)  {
     .introDiv {
         margin-top: 0px;
         background-image: url("../img/slide-bg-complexity.jpg");
         background-repeat: no-repeat;
         background-position-x: 40%;
-        height: 530px;
+        height: 540px;
         background-attachment: fixed;
-        background-size: auto 67%;
+        background-size: auto 100%;
         box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+
+    .introSection{
+        width:800px;
+        margin: 0 auto;
+        height:100%;
+
+    }
+    .intoDivMobileBg{
+         background-image: url("../img/slide-bg-complexity.jpg");
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+        height: auto;
+        padding-bottom:50px;
+        background-size: auto 500px;
+        background-attachment:local;
+    }
+
+    .introContent
+    {
+
+    }
+    .headlineAndDesc{
+        width:100%;
+        height:auto;
+        padding-bottom:10px;
+
+    }
+    .introHeadline
+    {
+        padding-top:50px;
+        color:white;
+        font-weight:lighter;
+        /*font-family:"Open Sans",sans-serif;*/
+        font-size: 3.4rem;
+        margin-bottom: 5px;
+    }
+    .introDescription{
+        font-size: 2rem;
+    }
+    .learnMoreBtn{
+        margin-left:10px;
+        margin-top:15px;
+        font-size:0.7rem;
+
+    }
+     .Button{
+        background-color:rgb(51,153,204);
+        border-radius:7px;
+        width:17rem;
+        height:3.8rem;
+        font-weight:lighter;
+        color:white;
+    }
+    .learnMoreBtn h3{
+        font-size: 1.5rem;
+        width: 12rem;
+        padding-top:5%;
+    }
+    .learnMoreBtn .btnLogo{
+        padding-top: 4%;
+
+    }
+
+
+    .introScrollbar{
+        margin-top:20px;
+        margin-left:0px;
+        height:auto;
+    }
+    .introScrollbar>ul{
+        list-style:none;
+    }
+    .introScrollBtn{
+        float:left;
+        list-style:none;
+        width:10px;
+        height:10px;
+        background-color:rgb(240, 240, 240);
+        /*color:rgb(86, 86, 86);*/
+        color:white;
+        margin-right:7px;
+        border-radius:2px;
+        display:block;
+        text-align:center;
+        font-size: 0px;
+        padding-top:0px;
+    }
+
+    .introScrollBtn:hover{
+        background-color:rgb(51, 153, 204);
+        color:rgb(255, 255, 255);
+    }
+    .additionalContentDiv{
+        margin-top:6px;
+        width:26rem;
+        height: 17rem;
+        margin-right: 3.5rem;
+        color:white;
+        box-shadow:  0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+        border-radius: 10px;
+        float: left;
+       
+    }
+    .additionalContentPar{
+        margin-top:0px;
+        padding-top:1.5rem;
+        padding-left:1.2rem;
+        margin-right:20px;
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+    .additionalContentDiv:nth-child(1)
+    {
+        background-color:rgba(256, 71, 161,0.9);
+    }
+    .additionalContentDiv:nth-child(2)
+    {
+        background-color:rgba(116, 205, 70,0.9);
+    }
+    .additionalContentDiv:nth-child(3)
+    {
+        background-color:rgba(254, 121, 32,0.9);
+    }
+    .intoDivMobileBg{
+        background: none;
+
+    }
+    .additionalContentReadMoreBtn{
+        display: none;
+    }
+    html{
+        font-size:  56%
     }
 }
 /* =========  wide version  ==========*/
 
 @media screen and (min-width: 980px){
-    .introDiv {
+    /*.introDiv {
         margin-top: 0px;
         background-image: url("../img/slide-bg-complexity.jpg");
         background-repeat: no-repeat;
@@ -771,17 +972,365 @@ main {
         background-attachment: fixed;
         background-size: auto 67%;
         box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
-    }
+    }*/
+    .introSection{
+        width:940px;
+        margin: 0 auto;
+        height:100%;
 
+    }
+    html{
+        font-size:  62.5%
+    }
 }
 
 
 
 
+/* ==============================================
+   Solutions section
+   ============================================== */
+
+
+/* =========  Mobile First  ==========*/
+
+
+.solutionsDiv{
+    background-image: url("../img/weDoBG.png");
+    background-color:rgb(62, 163, 202);
+    background-repeat:repeat;
+    width:100%;
+    height:400px;
+    box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+
+}
+.solutionsDivBg{
+    width:100%;
+    height:100%;
+    background: radial-gradient(rgba(180, 250, 255,0.4), rgba(42, 143, 192,0.1)); /* Standard syntax */
+}
+.sectionMainHeadline{
+    width:100%;
+    margin:0 auto;
+    font-size: 2.7rem;
+    color:white;
+    padding-top:3rem;
+    padding-bottom:2rem;
+    font-weight:100;
+    text-align:center
+}
+.servicesList{
+    list-style:none;
+    margin-left:0px;
+    padding-left:0px;
+
+}
+.servicesList>li{
+    width:33%;
+    float:left;
+    height:12rem;
+    margin-left:0px;
+    margin-bottom:3rem;
+}
+.servicesDiv{
+    width:100%;
+}
+.serviceHeadline{
+    width:8rem;
+    margin: 0 auto;
+    text-align:center;
+    font-size:1.3rem;
+    margin-top:0px;
+    color:white;
+}
+/*services icon's and hovers*/
+.serviceLogoSmartMoney{
+    background-image: url("../img/solution_icon_smart-money.png");
+    background-repeat:no-repeat;
+    background-size:auto 70%;
+    background-position-x:50%;
+    width:90px;
+    height:80px;
+    margin: 0 auto;
+}
+.serviceLogoSmartMoney:hover {
+    background-image: url("../img/solution_icon_smart-money_hover.png");
+}
+.serviceLogoBizAnalitics{
+    background-image: url("../img/solution_icon_biz-analitics.png");
+    background-repeat:no-repeat;
+    background-size:auto 70%;
+    background-position-x:40%;
+    width:80px;
+    height:80px;
+    margin: 0 auto;
+}
+.serviceLogoBizAnalitics:hover {
+    background-image: url("../img/solution_icon_biz-analitics_hover.png");
+}
+.serviceLogoOptimize{
+    background-image: url("../img/solution_icon_optimize-efficnt.png");
+    background-repeat:no-repeat;
+    background-size:auto 70%;
+    background-position-x:25%;
+    width:80px;
+    height:80px;
+    margin: 0 auto;
+}
+.serviceLogoOptimize:hover {
+    background-image: url("../img/solution_icon_optimize-efficnt_hover.png");
+}
+.serviceLogoTransform{
+    background-image: url("../img/solution_icon_biz-transform.png");
+    background-repeat:no-repeat;
+    background-size:auto 70%;
+    background-position-x:25%;
+    width:80px;
+    height:80px;
+    margin: 0 auto;
+}
+.serviceLogoTransform:hover {
+    background-image: url("../img/solution_icon_biz-transform_hover.png");
+}
+.serviceLogoPersonal{
+    background-image: url("../img/solution_icon_personal.png");
+    background-repeat:no-repeat;
+    background-size:auto 70%;
+    background-position-x:30%;
+    width:80px;
+    height:80px;
+    margin: 0 auto;
+}
+.serviceLogoPersonal:hover {
+    background-image: url("../img/solution_icon_personal_hover.png");
+}
+.serviceLogoDiti{
+    background-image: url("../img/solution_icon_diti-cx.png");
+    background-repeat:no-repeat;
+    background-size:auto 70%;
+    background-position-x:60%;
+    width:80px;
+    height:80px;
+    margin: 0 auto;
+}
+.serviceLogoDiti:hover {
+    background-image: url("../img/solution_icon_diti-cx_hover.png");
+}
+.additionalServices{
+    display:none;
+}
+
+/* =========  Medium version right after  ==========*/
+
+@media screen and (min-width: 800px) {
+    .solutionsDiv {
+        height: 400px;
+        
+    }
+    .sectionMainHeadline {
+        font-size: 4rem;
+        padding-top: 3rem;
+        padding-bottom:5rem;
+        font-weight: 100;
+    }
+    .servicesDiv{
+        width:800px;
+        margin:0 auto;
+    }
+    .servicesList>li{
+        width:16.66%;
+    }
+    .serviceLogoSmartMoney,.serviceLogoBizAnalitics,.serviceLogoOptimize,.serviceLogoTransform,.serviceLogoPersonal,.serviceLogoDiti{
+        width:12rem;
+        height:12rem;
+    }
+    .serviceLogoSmartMoney{
+        width:14rem;
+    }
+    .additionalServices{
+        display:block;
+        float:none;
+        width:100%;
+        height:6rem;
+        margin:0 auto;
+        float:left;
+        
+        padding-top:6rem;
+    }
+    .additionalServices .Button{
+        margin: 0 auto;
+        width: 22rem;
+        
+    }
+    
+    .additionalServices .Button .btnText{
+        font-size:1.6rem;
+        width:18rem;
+        color:white;
+    }
+   .additionalServices .Button .btnLogo{
+       padding-top:0.5rem;
+    }
+}
+
+/* =========  Wide version  ==========*/
+
+@media screen and (min-width: 980px) {
+    .servicesDiv{
+        width:940px;
+    }
+    .solutionsDiv {
+        height: 450px;
+        
+    }
+}
+
+/* ==============================================
+   events section
+   ============================================== */
 
 
 
+/* =========  Mobile First  ==========*/
 
+.eventsDiv{
+    width:100%;
+    height:auto;
+    background-image: url("../img/news-and-events-bg.jpg");
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        padding-bottom:50px;
+        background-size: auto 100%;
+        background-attachment:local;
+}
+.eventContainer{
+
+    width:80%;
+    margin-left:10%;
+}
+.eventHeadline{
+    color:white;
+    font-size:2rem;
+    margin-bottom:0.2rem;
+}
+.event{
+    background-color:rgba(250,250,250,0.4);
+    height:9rem;
+    width:100%;
+    margin-top:0px;
+    border-radius:3px;
+    box-shadow: 2px 2px 2px hsla(0, 0%, 26%, 0.5);
+}
+.eventDate{
+    height:7rem;
+    margin-top: 1rem;
+    margin-left:1.3rem;
+    background-color:#3399CC;
+    box-shadow: 0px 0px 5px hsla(0, 0%, 26%, 0.5);
+    width:6rem;
+    border-radius:1px;
+    float:left;
+    -webkit-transition: box-shadow 0,5s; /* Safari */
+    transition: box-shadow 0.5s;
+}
+.eventDate:hover{
+    box-shadow: 1px 1px 10px hsla(0, 0%, 10%, 0.7);
+}
+.eventDateDay{
+    margin-top:0px;
+    padding-top:2px;
+    font-size:3rem;
+    color:white;
+    border-bottom: 1px dotted white;
+    text-align:center;
+    width:100%;
+    margin-bottom:0px;
+    font-weight:bold;
+}
+.eventDateMonth{
+    font-size:2rem;
+    color:white;
+    width:100%;
+    text-align:center;
+    margin-top:0px;
+    
+}
+.eventDetails{
+    font-size:1.4rem;
+    padding-left:9rem;
+    padding-right:2rem;
+    color:black;
+    padding-top:1rem;
+    margin-top:0px;
+}
+.allEventBtnText{
+    color:white;
+    font-size:1.2rem;
+    margin-top:0px;
+    margin-left:1rem;
+    float:left;
+}
+.allEventsBtn{
+    margin-top:1rem;
+    padding-bottom:5rem;
+}
+.allEventsBtn>img{
+    float:left;
+}
+.event:hover{
+    background-color:white;
+}
+@keyframes shadowGrow {
+    from {box-shadow: 0px 0px 5px hsla(0, 0%, 26%, 0.5);}
+    to {box-shadow: 1px 1px 8px hsla(0, 0%, 35%, 0.5);}
+}
+
+/* =========  Medium version ==========*/
+
+@media screen and (min-width: 800px) {
+    .eventsDiv{
+        width:100%;
+        height:350px;
+        background-image: url("../img/news-and-events-bg.jpg");
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        padding-bottom:50px;
+        background-size: auto 100%;
+        background-attachment:fixed;
+    }
+    .eventContainer{
+        float:left;
+        width:27rem;
+        height:15rem;
+        margin-right:2.5rem;
+        margin-left:0rem;
+    }
+    .eventsSection{
+        width:800px;
+        height:100%;
+        display:block;
+        margin: 0 auto;
+    }
+    .eventHeadline{
+        font-size:2.5rem;
+    }
+    .event{
+        height:10rem;
+    }
+
+}
+
+/* =========  Wide version  ==========*/
+
+@media screen and (min-width: 980px) {
+    .eventsSection{
+        width:940px;
+    }
+    .eventsDiv {
+        height: 380px;
+        
+    }
+}
 
 /* ==========================================================================
    Helper classes
