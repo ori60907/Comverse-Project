@@ -1231,7 +1231,7 @@ main {
     border-radius:1px;
     float:left;
     -webkit-transition: box-shadow 0,5s; /* Safari */
-    transition: box-shadow 0.5s;
+    transition: box-shadow 0.2s;
 }
 .eventDate:hover{
     box-shadow: 1px 1px 10px hsla(0, 0%, 10%, 0.7);
@@ -1331,6 +1331,518 @@ main {
         
     }
 }
+
+
+/* ==============================================
+   stories section
+   ============================================== */
+
+
+
+/* =========  Mobile First  ==========*/
+
+.storiesDiv{
+    background-color:rgb(236, 236, 236);
+    width:100%;
+    height:auto;
+    box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+}
+.storiesSection{
+    width:100%;
+    margin-left:0px;
+    padding-top:2rem;
+    
+}
+.storiesHeadline{
+    font-size:2.2rem;
+    color:rgb(86, 86, 86);
+    width:100%;
+    text-align:center;
+    margin-bottom:2rem;
+}
+.storiesFirstColumn{
+    width:35rem;
+    margin: 0 auto;
+    height:auto;
+    padding-bottom:9rem;
+    margin-bottom:1.5rem;
+}
+.storiesSecondColumnMobile{
+    width:35rem;
+    margin: 0 auto;
+    display:block;
+        height:auto;
+    padding-bottom:9rem;
+    margin-bottom:1.5rem;
+}
+.storiesSecondColumnWide{
+    width:35rem;
+    margin: 0 auto;
+    display:none;
+    height:auto;
+    padding-bottom:9rem;
+    margin-bottom:1.5rem;
+}
+.storiesThirdColumn{
+    display:none;
+}
+.bigStoryDiv{
+    width:100%;
+    height:19rem;
+    background-color:white;
+    overflow:hidden;
+    position:relative;
+    margin-bottom:1.5rem;
+}
+.bigStoryGeneral{
+    width:100%;
+    height:100%;
+    position:absolute; 
+    background-color:white;
+    bottom:0rem;
+    transition: bottom 0.5s;
+}
+.bigStoryMainContent>img{
+    width:8.5rem;
+    float:left;
+}
+.bigStoryMainContent>blockquote{
+    width:22rem;
+    margin-left:10rem;
+    margin-right:0px;
+    /*float:left;*/
+    font-size:1.5rem;
+}
+.bigStoryMainContent{
+    width:92%;
+    margin-left:4%;
+    margin-top:1rem;
+    border-bottom:1px solid rgb(226, 226, 226);
+    min-height:8rem;
+    height:auto;
+    padding-bottom:0.5rem;
+}
+.quotePersonName
+{
+    margin-top:1rem;
+    margin-left:5%;
+    margin-bottom:0px;
+    margin-right:0px;
+    font-size:1.5rem;
+    color:rgb(49, 149, 201);
+
+    
+}
+.quotePersonDescription{
+    margin-top:0.5rem;
+    font-size:1.3rem;
+    margin-left:5%;
+    margin-right:0px;
+}
+
+.quotePersonLogo{
+    float:right;
+    height:7rem;
+    max-width:30%;
+}
+.quotePersonLogo2{
+    float:right;
+    height:5rem;
+    max-width:30%;
+}
+.personInfo{
+    float:left;
+    width:65%;
+}
+.bigStorySecondery{
+    background-color: rgb(58, 166, 219);
+    width:100%;
+    height:100%;
+}
+.bigStoryDiv:hover .bigStoryGeneral{
+    bottom:20rem;
+}
+
+.largeQuote{
+    margin-top:0rem;
+    margin-right:2rem;
+    margin-left:2rem;
+    padding-top:2rem;
+    font-size:2rem;
+    color:white;
+}
+.secondQuote{
+    font-size:1.22rem; 
+}
+.littleStoryDiv{
+    width:11rem;
+    height:9rem;
+    margin-right:1rem;
+    margin-left:0px;
+    float:left;
+    overflow:hidden;
+    position:relative;
+}
+.littleStoryDiv3{
+    width:11rem;
+    height:9rem;
+    margin-right:0px;
+    margin-left:0px;
+    float:left;
+    overflow:hidden;
+    position:relative;
+}
+.littleStoryGeneral{
+    width:100%;
+    height:100%;
+    background-color:white;
+    position:absolute;
+    bottom:0rem;
+    transition: bottom 0.5s;
+}
+.littleStoryLogo{
+    width:90%;
+    height:auto;
+    margin-left:5%;
+}
+.littleStorySecondery{
+    
+}
+.playLogo{
+    width:100%;
+}
+.littleStoryDiv:hover .littleStoryGeneral{
+    bottom:11rem;
+}
+.littleStoryDiv3:hover .littleStoryGeneral{
+    bottom:11rem;
+}
+.moreStoriesButton{
+    width:24rem;
+    margin:0 auto;
+    padding-bottom:3rem;
+    padding-top:2rem;
+}
+.moreStoriesButton .Button{
+    width:100%;
+    height:4rem;
+}
+.moreStoriesButton .btnText{
+    width:19rem;
+    padding-left:1rem;
+    font-size:1.6rem;
+    padding-top:0.7rem;
+}
+.moreStoriesButton .btnLogo{
+    margin-top:1rem;
+}
+
+
+
+
+/* =========  Medium version ==========*/
+
+@media screen and (min-width: 800px) {
+    .storiesSecondColumnMobile{
+        display:none;
+    }
+    .storiesSecondColumnWide{
+        display:block;
+        float:left;
+        padding-bottom:0rem;
+        margin-right:0.7rem;
+        width:33.1rem;
+    }
+    .storiesGrid{
+        width:805px;
+        margin: 0 auto;
+        height:30rem;
+    }
+    .storiesFirstColumn{
+        width:33.1rem;
+        margin: initial;
+        height:auto;
+        padding-bottom:0rem;
+        margin-bottom:1.5rem;
+        float:left;
+        margin-right:0.7rem;
+    }
+    .storiesSecondColumnWide .bigStoryDiv{
+        margin-bottom:0px;
+    }
+    .storiesSecondColumnWide .littleStoryDiv, .storiesSecondColumnWide .littleStoryDiv3{
+        margin-bottom:1.5rem;
+    }
+    .storiesHeadline{
+        font-size:3rem;
+        padding-bottom:2.5rem;
+    }
+    .littleStoryDiv, .littleStoryDiv3{
+        width:10.5rem;
+        height:9rem;
+    }
+    .littleStoryDiv{
+        margin-right:0.7rem;
+    }
+    .bigStoryDiv{
+        width:33.1rem;
+        margin-right:0rem;
+    }
+    .bigStoryMainContent blockquote{
+        width:21rem;
+        margin-left:9rem;
+        margin-right:0px;
+        /*float:left;*/
+        font-size:1.3rem;
+    }
+    .storiesThirdColumn{
+        display:block;
+        width:21.8rem;
+        margin-right:0px;
+        float:left;
+    }
+    .storiesThirdColumn .bigStoryDiv {
+        width:21.8rem;
+    }
+    .storiesThirdColumn blockquote{
+        margin-left:1rem;
+        width:19rem;
+    }
+    
+}
+
+/* =========  Wide version  ==========*/
+
+@media screen and (min-width: 980px) {
+    .storiesGrid{
+        width:940px;
+    }
+    .eventsDiv {
+        height: 380px;
+        
+    }
+}
+
+
+/* ==============================================
+   Footer section
+   ============================================== */
+
+/* =========  Mobile First  ==========*/
+
+.mobileFooterBar{
+    display:block;
+    position:relative;
+}
+.scrollUpDiv{
+    position:absolute;
+    right:20px;
+    top:-30px;
+}
+.wideFooterBar{
+    display:none;
+    position:relative;
+
+}
+.mobileFooterMenu{
+    margin-top:0px;
+    list-style:none;
+    padding-left:0px;
+}
+.footerMenuBtn{
+    width:100%;
+    height:3rem;
+    padding-left:2rem;
+    font-size:1.3rem;
+    padding-top:1rem;
+    color:white;
+    background-color:rgb(44, 44, 44);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.footerMenuBtn h4{
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:1.3rem;
+    font-weight:normal;
+    float:left;
+}
+.shareOptionsList{
+    list-style:none;
+    float:left;
+}
+.shareOptionsList > li{
+    float:left;
+    margin-right:1.5rem;
+}
+.shareIcon{
+    width:2.3rem;
+    height:2.3rem;
+}
+.shareIcon{
+    background-repeat:no-repeat;
+}
+.shareOptionsList > li:nth-child(1) .shareIcon{
+    background-image: url("../img/socialMenuIcon-youtube.png")
+}
+.shareOptionsList > li:nth-child(1) .shareIcon:hover{
+    background-image: url("../img/socialMenuIcon-youtube_hover.png")
+}
+.shareOptionsList > li:nth-child(2) .shareIcon{
+    background-image: url("../img/socialMenuIcon-twitter.png")
+}
+.shareOptionsList > li:nth-child(2) .shareIcon:hover{
+    background-image: url("../img/socialMenuIcon-twitter_hover.png")
+}
+.shareOptionsList > li:nth-child(3) .shareIcon{
+    background-image: url("../img/socialMenuIcon-linkdin.png")
+}
+.shareOptionsList > li:nth-child(3) .shareIcon:hover{
+    background-image: url("../img/socialMenuIcon-linkdin_hover.png")
+}
+
+
+.footerMenuBtn> h6{
+        padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:1.3rem;
+    font-weight:normal;
+    float:left;
+}
+.footerMenuBtn>select{
+        float:left;
+        margin-left:2rem;
+}
+.footBarSelectLang{
+    background-color:rgb(100,100,100);
+    border:none;
+    border-radius:2px;
+}
+.copyrightDiv{
+    width:100%;
+}
+.copyrightList{
+    list-style:none;
+}
+.copyrightList li{
+    float:left;
+    font-size:1rem;
+}
+.linksDivider{
+    width:0.1rem;
+    height:1.2rem;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    background-color:rgb(200,200,200);
+    display:block;
+    float:left;
+}
+
+
+/* =========  Medium version ==========*/
+
+@media screen and (min-width: 800px) {
+
+    .wideFooterBar{
+        display:block;
+        background-image: url("../img/weDoBG2.png");
+        background-color: rgb(33, 33, 33);
+        background-repeat: repeat;
+        width: 100%;
+        height: 310px;
+        box-shadow: inset 0px 4px 10px -5px hsla(0, 0%, 26%, 0.5);
+    }
+    .mobileFooterBar{
+        display:none;
+    }
+
+    .footerBarDivBg {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(rgba(60, 60, 60,0.6), rgba(43, 43, 43,0.7)); /* Standard syntax */
+    }
+    .footerBarContainer{
+        width:800px;
+        margin:0 auto;
+        height:100%;
+        position:relative;
+    }
+    .siteMap{
+        width:70%;
+        height:100%;
+        float:left;
+        color:rgb(210,210,210);
+    }
+    .footerBarAside{
+        width:30%;
+        background-color:rgba(61, 61, 61,1);
+        height:100%;
+        float:left;
+    }
+    .siteMapSections{
+        list-style:none;
+        padding-bottom:0px;
+        padding-top:1.5rem;
+        margin-top:0px;
+        margin-bottom:0px;
+        margin-left:0px;
+        padding-left:0px;
+        height:23rem;
+    }
+    .siteMapSections h3{
+        font-size:1.5rem;
+    }
+    .subSiteMapList{
+        list-style:none;
+        padding-left:0.3rem;
+        font-size:1.3rem;
+    }
+    .siteMapSections> li{
+        float:left;
+        margin-right:5rem;
+    }
+    .siteMapSections> li:nth-child(3){
+        float:left;
+        margin-right:0rem;
+    }
+    .siteMap a{
+        color:rgb(220,220,220);
+    }
+    .copyrightDiv{
+        margin-top:4rem;
+        color: rgb(150,150,150);
+        font-weight:lighter;
+        font-size:2rem;
+    }
+    .copyrightDiv a{
+        color: rgb(150,150,150);
+    }
+    .linksDivider{
+        margin-left:1.5rem;
+        margin-right:1.5rem;
+        width:1px;
+        height:10px;
+        background-color:rgb(150,150,150);
+    }
+    .copyrightList>li{
+        font-size:1.3rem;
+        margin-top:6px;
+    }
+    .copyrightList{
+        padding-left:0px;
+        margin-left:0px;
+    }
+}
+
+/* =========  Wide version  ==========*/
+
+@media screen and (min-width: 980px) {
+    .footerBarContainer{
+        width:940px;
+    }
 
 /* ==========================================================================
    Helper classes
