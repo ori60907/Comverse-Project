@@ -303,7 +303,7 @@ textarea {
         margin-left: 5px;
     }
 
-    #searchInput {
+    #searchInput,#mobSearchInput {
         border-radius: 5px;
         border: 1px solid #d2d2d2;
         width: 150px;
@@ -413,7 +413,7 @@ textarea {
         margin-left: 3px;
     }
 
-    #searchInput {
+    #searchInput,#mobSearchInput {
         border-radius: 5px;
         border: 1px solid #d2d2d2;
         width: 120px;
@@ -635,7 +635,7 @@ textarea {
         margin-left: 3px;
     }
 
-    #searchInput {
+    #searchInput,#mobSearchInput {
         border-radius: 5px;
         border: 1px solid #d2d2d2;
         width: 120px;
