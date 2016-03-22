@@ -121,7 +121,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+    .hide-text {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
 
 
 
@@ -146,6 +150,9 @@ textarea {
     width: 130px;
     height: 30px;
     box-sizing: border-box;
+            border-top: 1px solid rgb(255, 255, 255);
+        border-left: 1px solid rgb(255, 255, 255);
+        border-right: 1px solid rgb(255, 255, 255);
 }
 
     .mainNav > ul > li > a {
@@ -2174,11 +2181,7 @@ main {
     /*
  * Hide visually and from screen readers:
  */
-    .hide-text {
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-    }
+
 
 
     .hidden {
